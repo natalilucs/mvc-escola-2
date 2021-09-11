@@ -1,0 +1,36 @@
+
+<%- include("../partials/header")%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="mt-5">Editar professor</h1>
+                <form action="/professores/editarProfessores" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome do Professor</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do professor" value="<%retorno.nome %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="materia">Matéria</label>
+                        <input type="text" class="form-control" id="materia" name="materia" placeholder="Matéria" value="<%retorno.materia %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="turma">Turma</label>
+                        <input type="text" class="form-control" id="turma" name="turma" placeholder="Turma" value="<%retorno.turma %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="periodo">Período</label>
+                        <input type="text" class="form-control" id="periodo" name="periodo" placeholder="Periodo" onblur="validacaoPeriodo(this)" value="<%retorno.periodo %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" onblur="validacaoEmail(this)" value="<%retorno.email %>">
+                    </div>
+                    <input type="hidden" name="id" value="<%=retorno._id %>">
+                    <button type="submit" class="btn btn-info">SALVAR EDIÇÃO</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include("../partials/footer")%>

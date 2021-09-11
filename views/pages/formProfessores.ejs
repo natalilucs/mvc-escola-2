@@ -1,0 +1,38 @@
+<%- include('../partials/header') %> 
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5">Cadastro de Professores</h1>
+            <form action="/professores/cadastrarProfessores" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome do Professor</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do professor">
+                </div>
+                <div class="form-group">
+                    <label for="materia">Matéria</label>
+                    <input type="text" class="form-control" id="materia" name="materia" placeholder="Matéria">
+                </div>
+                <div class="form-group">
+                    <label for="turma">Turma</label>
+                    <input type="text" class="form-control" id="turma" name="turma" placeholder="Turma">
+                </div>
+                <div class="form-group">
+                    <label for="periodo">Período</label>
+                    <input type="text" class="form-control" id="periodo" name="periodo" placeholder="Periodo" onblur="validacaoPeriodo(this)">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" onblur="validacaoEmail(this)">
+                </div>
+                <button type="submit" class="btn btn-info" id="botao">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('../partials/footer') %>
+
+<!-- 22- inserindo o conteúdo que irá na paginda de formulario e aplicando o include -->
